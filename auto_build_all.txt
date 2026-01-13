@@ -27,17 +27,9 @@ cd alpine_aria2-build
 sudo docker build -t alpine_aria2 .
 sudo docker tag alpine_aria2 nightweevil2477/docker_projects:alpine_aria2
 cd ..
-cd debian_frigate-build
-sudo docker build -t debian_frigate .
-sudo docker tag debian_frigate nightweevil2477/docker_projects:debian_frigate
-cd ..
 cd alpine_n8n-build
 sudo docker build -t alpine_n8n .
 sudo docker tag alpine_n8n nightweevil2477/docker_projects:alpine_n8n
-cd ..
-cd debian_neolink-build
-sudo docker build -t debian_neolink .
-sudo docker tag debian_neolink nightweevil2477/docker_projects:debian_neolink
 cd ..
 cd alpine_pihole_cloudflare-build
 sudo docker build -t alpine_pihole_cloudflare .
@@ -56,6 +48,18 @@ sudo docker build -t alpine_portainer .
 sudo docker tag alpine_pihole_portainer nightweevil2477/docker_projects:alpine_portainer
 cd ..
 
+#Debian
+cd ..
+cd debian_neolink-build
+sudo docker build -t debian_neolink .
+sudo docker tag debian_neolink nightweevil2477/docker_projects:debian_neolink
+cd ..
+cd debian_frigate-build
+sudo docker build -t debian_frigate .
+sudo docker tag debian_frigate nightweevil2477/docker_projects:debian_frigate
+cd ..
+
+
 #Push created images
 #Logon
 sudo docker login -u <username> -p <password> docker.io#Push
@@ -66,11 +70,13 @@ sudo docker push nightweevil2477/docker_projects:alpine_tinyproxy_old
 sudo docker push nightweevil2477/docker_projects:alpine_openssh
 sudo docker push nightweevil2477/docker_projects:alpine_tinyproxy
 sudo docker push nightweevil2477/docker_projects:alpine_aria2
-sudo docker push nightweevil2477/docker_projects:debian_frigate
 sudo docker push nightweevil2477/docker_projects:alpine_n8n
-sudo docker push nightweevil2477/docker_projects:debian_neolink
 sudo docker push nightweevil2477/docker_projects:alpine_pihole_cloudflare
 sudo docker push nightweevil2477/docker_projects:alpine_pihole_pia
 sudo docker push nightweevil2477/docker_projects:alpine_pihole_nord
 sudo docker push nightweevil2477/docker_projects:alpine_portainer
+
+#Debian
+sudo docker push nightweevil2477/docker_projects:debian_frigate
+sudo docker push nightweevil2477/docker_projects:debian_neolink
 
