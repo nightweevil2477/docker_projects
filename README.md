@@ -50,7 +50,7 @@ sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static
 sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| --dns |*static ip*| -v /mounted folder/aria2/config:/aria2/conf -v /mounted folder/aria2/downloads:/aria2/data -e BASIC_AUTH_USERNAME=|*change me*| -e RPC_SECRET=|*change me*| -e EMBED_RPC_SECRET=|*change me*| -e BASIC_AUTH_PASSWORD=|*change me*| --name |*container name*| nightweevil2477/docker_projects:alpine_aria2<br>
 <br>
 --=Openspeedtest (For The LAN)=--
-docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| --name |*container name*| openspeedtest/latest<br>
+docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| --name |*container name*| nightweevil2477/docker_projects:alpine_openspeedtest<br>
 <br>
 --=Uptime-Kuma=--
 docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| -v /mounted folder/uptime-kuma:/app/data --name |*container name*| nightweevil2477/docker_projects:alpine_uptime-kuma<br>
