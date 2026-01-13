@@ -1,0 +1,11 @@
+build process
+-------------
+
+mkdir alpine_pihole_nord-build
+cd alpine_pihole_nord-build
+nano Dockerfile
+<paste text>
+sudo docker build -t alpine_pihole_nord .
+sudo docker tag alpine_pihole_nord nightweevil2477/docker_projects:alpine_pihole_nord
+sudo docker login -u <username> -p <password> docker.io
+sudo docker push nightweevil2477/docker_projects:alpine_pihole_nord

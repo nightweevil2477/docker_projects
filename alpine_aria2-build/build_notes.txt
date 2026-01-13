@@ -1,0 +1,11 @@
+build process
+-------------
+
+mkdir alpine_aria2-build
+cd alpine_aria2-build
+nano Dockerfile
+<paste text>
+sudo docker build -t alpine_aria2 .
+sudo docker tag alpine_aria2 nightweevil2477/docker_projects:alpine_aria2
+sudo docker login -u <username> -p <password> docker.io
+sudo docker push nightweevil2477/docker_projects:alpine_aria2

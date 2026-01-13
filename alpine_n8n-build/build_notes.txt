@@ -1,0 +1,11 @@
+build process
+-------------
+
+mkdir alpine_n8n-build
+cd alpine_n8n-build
+nano Dockerfile
+<paste text>
+sudo docker build -t alpine_n8n .
+sudo docker tag alpine_n8n nightweevil2477/docker_projects:alpine_n8n
+sudo docker login -u <username> -p <password> docker.io
+sudo docker push nightweevil2477/docker_projects:alpine_n8n

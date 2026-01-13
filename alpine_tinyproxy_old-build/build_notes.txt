@@ -1,0 +1,11 @@
+build process
+-------------
+
+mkdir alpine_tinyproxy_old-build
+cd alpine_tinyproxy_old-build
+nano Dockerfile
+<paste text>
+sudo docker build -t alpine_tinyproxy_old .
+sudo docker tag alpine_tinyproxy_old nightweevil2477/docker_projects:alpine_tinyproxy_old
+sudo docker login -u <username> -p <password> docker.io
+sudo docker push nightweevil2477/docker_projects:alpine_tinyproxy_old

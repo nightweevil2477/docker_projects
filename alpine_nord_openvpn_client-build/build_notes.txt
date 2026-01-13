@@ -1,0 +1,15 @@
+build process
+-------------
+
+mkdir alpine_nord_openvpn_client-build
+cd alpine_nord_openvpn_client-build
+nano Dockerfile
+<paste text>
+nano startup.sh
+<paste text>
+nano vpn_startup.sh
+<paste text>
+sudo docker build -t alpine_nord_openvpn_client .
+sudo docker tag alpine_nord_openvpn_client nightweevil2477/docker_projects:alpine_nord_openvpn_client
+sudo docker login -u <username> -p <password> docker.io
+sudo docker push nightweevil2477/docker_projects:alpine_nord_openvpn_client

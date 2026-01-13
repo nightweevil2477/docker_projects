@@ -1,0 +1,11 @@
+build process
+-------------
+
+mkdir alpine_portainer-build
+cd alpine_portainer-build
+nano Dockerfile
+<paste text>
+sudo docker build -t alpine_portainer .
+sudo docker tag alpine_portainer nightweevil2477/docker_projects:alpine_portainer
+sudo docker login -u <username> -p <password> docker.io
+sudo docker push nightweevil2477/docker_projects:alpine_portainer

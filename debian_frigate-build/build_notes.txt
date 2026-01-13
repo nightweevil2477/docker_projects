@@ -1,0 +1,11 @@
+build process
+-------------
+
+mkdir debian_frigate-build
+cd debian_frigate-build
+nano Dockerfile
+<paste text>
+sudo docker build -t debian_frigate .
+sudo docker tag debian_frigate nightweevil2477/docker_projects:debian_frigate
+sudo docker login -u <username> -p <password> docker.io
+sudo docker push nightweevil2477/docker_projects:debian_frigate

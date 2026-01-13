@@ -1,0 +1,12 @@
+build process
+-------------
+
+mkdir alpine_uptime-kuma-build
+cd alpine_uptime-kuma-build
+nano Dockerfile
+<paste text>
+sudo docker build -t alpine_uptime-kuma .
+sudo docker tag alpine_uptime-kuma nightweevil2477/docker_projects:alpine_uptime-kuma
+sudo docker login -u <username> -p <password> docker.io
+sudo docker push nightweevil2477/docker_projects:alpine_uptime-kuma
+

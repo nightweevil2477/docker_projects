@@ -1,0 +1,11 @@
+-build process
+-------------
+
+mkdir debian_neolink-build
+cd debian_neolink-build
+nano Dockerfile
+<paste text>
+sudo docker build -t debian_neolink .
+sudo docker tag debian_neolink nightweevil2477/docker_projects:debian_neolink
+sudo docker login -u <username> -p <password> docker.io
+sudo docker push nightweevil2477/docker_projects:debian_neolink

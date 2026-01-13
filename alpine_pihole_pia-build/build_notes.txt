@@ -1,0 +1,11 @@
+build process
+-------------
+
+mkdir alpine_pihole_pia-build
+cd alpine_pihole_pia-build
+nano Dockerfile
+<paste text>
+sudo docker build -t alpine_pihole_pia .
+sudo docker tag alpine_pihole_pia nightweevil2477/docker_projects:alpine_pihole_pia
+sudo docker login -u <username> -p <password> docker.io
+sudo docker push nightweevil2477/docker_projects:alpine_pihole_pia

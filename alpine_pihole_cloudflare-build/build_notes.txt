@@ -1,0 +1,11 @@
+build process
+-------------
+
+mkdir alpine_pihole_cloudflare-build
+cd alpine_pihole_cloudflare-build
+nano Dockerfile
+<paste text>
+sudo docker build -t alpine_pihole_cloudflare .
+sudo docker tag alpine_pihole_cloudflare nightweevil2477/docker_projects:alpine_pihole_cloudflare
+sudo docker login -u <username> -p <password> docker.io
+sudo docker push nightweevil2477/docker_projects:alpine_pihole_cloudflare
