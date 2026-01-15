@@ -2,7 +2,7 @@
 FROM quantumentangledandy/neolink
 
 # Install packages
-RUN apt-get install bash -y
+RUN apt update && apt install bash netcat-traditional -y
 
 # Set environment variables
 ENV NEO_LINK_MODE=rtsp
