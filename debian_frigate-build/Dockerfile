@@ -1,6 +1,9 @@
 # Built using image
 FROM ghcr.io/blakeblackshear/frigate:stable
 
+# Install packages
+RUN apt update && apt install bash netcat-traditional -y
+
 # Set environment variables
 ENV shm_size="128mb"
 
