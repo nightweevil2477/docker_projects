@@ -24,39 +24,43 @@ sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static
 <br>
 -=Custom Built From DockerHub Image=-<br>
 <br>
---=Pihole=--<br>
+--=Pihole=-- (FROM pihole/pihole:latest)<br>
 sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| -e FTLCONF_webserver_api_password=|*change me*| --name |*container name*| nightweevil2477/docker_projects:alpine_pihole_cloudflare<br>
 <br>
---=Pihole=--<br>
+--=Pihole=-- (FROM pihole/pihole:latest)<br>
 sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| -e FTLCONF_webserver_api_password=|*change me*| --name |*container name*| nightweevil2477/docker_projects:alpine_pihole_pia<br>
 <br>
---=Pihole=--<br>
+--=Pihole=-- (FROM pihole/pihole:latest)<br>
 sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| -e FTLCONF_webserver_api_password=|*change me*| --name |*container name*| nightweevil2477/docker_projects:alpine_pihole_nord<br>
 <br>
---=Portainer=--
+--=Portainer=-- (FROM portainer/portainer-ce:latest)
 <br>
-sudo docker run -d --restart unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v /mounted folder/portainer/data:/data -p 9443:9443 --name |*container name*| nightweevil2477/docker_projects:alpine_portainer<br>
+sudo docker run -d --restart unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v /mounted folder/portainer/data:/data --name |*container name*| nightweevil2477/docker_projects:alpine_portainer<br>
 <br>
---=Neolink=--<br>
+--=Neolink=-- (FROM quantumentangledandy/neolink)<br>
 sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| -dns |*static ip*| -v /mounted folder/neolink/config.toml:/etc/neolink.toml --name |*container name*| nightweevil2477/docker_projects:debian_neolink<br>
 <br>
---=Frigate=--<br>
+--=Frigate=-- (FRO M ghcr.io/blakeblackshear/frigate:stable)<br>
 sudo docker run -d --privileged --restart unless-stopped --net |*network name*| --ip |*static ip*| --dns |*static ip*| -v /etc/localtime:/etc/localtime:ro -v /mounted folder/frigate/config:/config -v /mounted folder/frigate/storage:/media/frigate -e FRIGATE_RTSP_PASSWORD=|*change me*| --tmpfs /tmp/cache:size=1000000000 --name |*container name*| nightweevil2477/docker_projects:debian_frigate<br>
 <br>
---=N8n=--<br>
+--=N8n=-- (FROM docker.n8n.io/n8nio/n8n)<br>
 sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| --dns |*static ip*| -v /mounted folder/n8n/data:/home/node/.n8n --name |*container name*| nightweevil2477/docker_projects:alpine_n8n<br>
 <br>
---=Aria2-NG=--<br>
+--=Aria2-NG=-- (FROM hurlenko/aria2-ariang)<br>
 sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| --dns |*static ip*| -v /mounted folder/aria2/config:/aria2/conf -v /mounted folder/aria2/downloads:/aria2/data -e BASIC_AUTH_USERNAME=|*change me*| -e RPC_SECRET=|*change me*| -e EMBED_RPC_SECRET=|*change me*| -e BASIC_AUTH_PASSWORD=|*change me*| --name |*container name*| nightweevil2477/docker_projects:alpine_aria2<br>
 <br>
---=Openspeedtest (For The LAN)=--<br>
+--=Openspeedtest (For The LAN)=-- (FROM openspeedtest/latest)<br>
 sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| --name |*container name*| nightweevil2477/docker_projects:alpine_openspeedtest<br>
 <br>
---=Uptime-Kuma=--<br>
+--=Uptime-Kuma=-- (FROM louislam/uptime-kuma)<br>
 sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| -v /mounted folder/uptime-kuma:/app/data --name |*container name*| nightweevil2477/docker_projects:alpine_uptime-kuma<br>
 <br>
 
 -=In Build=-<br>
+<br>
+--=HomeAssistant=--<br>
+<br>
+--=cAdvisor=--<br>
 <br>
 --=Speedtest-tracker (For The WAN)=--
 <br>
