@@ -55,7 +55,22 @@ sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static
 --=Uptime-Kuma=-- (FROM louislam/uptime-kuma)<br>
 sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| -v /mounted folder/uptime-kuma:/app/data --name |*container name*| nightweevil2477/docker_projects:alpine_uptime-kuma<br>
 <br>
-
+--=Windows 10=-- (FROM dockurr/windows)<br>
+sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| -v /mounted folder/windows_10_pro:/storage --device=/dev/kvm --stop-timeout 120 --name |*container name*| nightweevil2477/docker_projects:windows_10_pro<br>
+<br>
+--=Windows 10 LTSC=-- (FROM dockurr/windows)<br>
+sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| -v /mounted folder/windows_10_pro_ltsc:/storage --device=/dev/kvm --stop-timeout 120 --name |*container name*| nightweevil2477/docker_projects:windows_10_pro_ltsc<br>
+<br>
+--=Windows 11=-- (FROM dockurr/windows)<br>
+sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| -v /mounted folder/windows_11_pro:/storage --device=/dev/kvm --stop-timeout 120 --name |*container name*| nightweevil2477/docker_projects:windows_11_pro<br>
+<br>
+--=Windows 11 LTSC=-- (FROM dockurr/windows)<br>
+sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| -v /mounted folder/windows_11_pro_ltsc:/storage --device=/dev/kvm --stop-timeout 120 --name |*container name*| nightweevil2477/docker_projects:windows_11_pro_ltsc<br>
+<br>
+--=Mac 14=-- (FROM dockurr/macos)<br>
+sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| -v /mounted folder/mac_14:/storage --device=/dev/kvm --stop-timeout 120 --name |*container name*| nightweevil2477/docker_projects:mac_14<br>
+<br>
+<br>
 -=In Build=-<br>
 <br>
 --=HomeAssistant=--<br>
