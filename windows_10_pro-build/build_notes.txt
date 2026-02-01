@@ -1,0 +1,13 @@
+build process
+-------------
+
+mkdir windows_10_pro-build
+cd windows_10_pro-build
+nano Dockerfile
+<paste text>
+sudo docker build -t windows_10_pro .
+sudo docker tag windows_10_pro nightweevil2477/docker_projects:windows_10_pro
+sudo docker login -u <username> -p <password> docker.io
+sudo docker push nightweevil2477/docker_projects:windows_10_pro
+
+

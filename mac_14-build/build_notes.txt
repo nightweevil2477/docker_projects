@@ -1,0 +1,11 @@
+build process
+-------------
+
+mkdir mac_14-build
+cd mac_14-build
+nano Dockerfile
+<paste text>
+sudo docker build -t mac_14 .
+sudo docker tag mac_14 nightweevil2477/docker_projects:mac_14
+sudo docker login -u <username> -p <password> docker.io
+sudo docker push nightweevil2477/docker_projects:mac_14
