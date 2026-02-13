@@ -1,13 +1,15 @@
 # docker_projects
 -=Repo/DockerHub=[nightweevil2477/docker_projects](https://hub.docker.com/r/nightweevil2477/docker_projects)<br>
 <br>
-<br>
 -=How to=-<br>
 <br>
 -=Macvlan=-<br>
 sudo docker network create -d macvlan -o parent=|*host nic*| --subnet=|*ip range.0/24*| --gateway=|*router ip*| --ip-range=|*ip range.0/24*| |*network name*|<br>
 <br>
 -=Dockers=-<br>
+-if issues as test remove ' -d ' from the command and you will see failure reason
+<br>
+<br>
 -=Built From Scratch=-<br>
 <br>
 --=NordVpn Openvpn Client=--<br>
@@ -81,5 +83,10 @@ sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static
 <br>
 --=NordLynx (Wireguard Client)
 <br>
+--=Zerotier=--
+<br>
+--=PiAlert/NetAlertX=--
+<br>
+
 --=Zerotier=--
 <br>
