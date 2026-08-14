@@ -1,0 +1,11 @@
+build process
+-------------
+
+mkdir alpine_pihole_proton-build
+cd alpine_pihole_proton-build
+nano Dockerfile
+<paste text>
+sudo docker build -t alpine_pihole_proton .
+sudo docker tag alpine_pihole_proton nightweevil2477/docker_projects:alpine_pihole_proton
+sudo docker login -u <username> -p <password> docker.io
+sudo docker push nightweevil2477/docker_projects:alpine_pihole_proton
