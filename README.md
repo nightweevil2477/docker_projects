@@ -35,6 +35,9 @@ sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static
 --=Pihole=-- (FROM pihole/pihole:latest)<br>
 sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| -e FTLCONF_webserver_api_password=|*change me*| --name |*container name*| nightweevil2477/docker_projects:alpine_pihole_nord<br>
 <br>
+--=Pihole=-- (FROM pihole/pihole:latest)<br>
+sudo docker run -d --restart unless-stopped --net |*network name*| --ip |*static ip*| -e FTLCONF_webserver_api_password=|*change me*| --name |*container name*| nightweevil2477/docker_projects:alpine_pihole_proton<br>
+<br>
 --=Portainer=-- (FROM portainer/portainer-ce:latest)
 <br>
 sudo docker run -d --restart unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v /mounted folder/portainer/data:/data --name |*container name*| nightweevil2477/docker_projects:alpine_portainer<br>
